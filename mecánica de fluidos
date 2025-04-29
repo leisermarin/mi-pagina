@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mecánica de Fluidos</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      padding: 1rem;
+      text-align: center;
+      color: #00bcd4;
+    }
+    nav select {
+      margin: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background-color: #444;
+      color: #f0f0f0;
+      border: none;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .image-section img {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 2rem auto;
+      border: 3px solid #00bcd4;
+      border-radius: 10px;
+    }
+    iframe {
+      display: block;
+      margin: 2rem auto;
+      width: 80%;
+      height: 400px;
+      border: none;
+    }
+    .comments, .books {
+      margin: 2rem 0;
+    }
+    .highlight {
+      color: #00bcd4;
+    }
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+    button {
+      background-color: #00bcd4;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    a {
+      color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="highlight">Explorando la Mecánica de Fluidos</h1>
+  </header>
+
+  <nav>
+    <label for="tema">Selecciona un tema:</label>
+    <select id="tema" onchange="mostrarTema()">
+      <option value="">-- Elige --</option>
+      <option value="presion">Presión</option>
+      <option value="flujo">Flujo</option>
+      <option value="bernoulli">Ecuación de Bernoulli</option>
+    </select>
+  </nav>
+
+  <div class="container">
+    <div class="image-section">
+      <img src="./flujo_realista_bn.png" alt="Ilustración de flujo de fluidos">
+    </div>
+
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo"></iframe>
+    </div>
+
+    <div class="comments">
+      <h2 class="highlight">Comentarios</h2>
+      <textarea placeholder="Escribe tu comentario..."></textarea>
+      <button onclick="enviarComentario()">Enviar</button>
+    </div>
+
+    <div class="books">
+      <h2 class="highlight">Libros recomendados</h2>
+      <ul>
+        <li><a href="https://drive.google.com" target="_blank">Mecánica de Fluidos – Munson</a></li>
+        <li><a href="https://openlibrary.org" target="_blank">Fluid Mechanics – Frank White</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function mostrarTema() {
+      const tema = document.getElementById("tema").value;
+      if (tema) alert("Has seleccionado el tema: " + tema);
+    }
+
+    function enviarComentario() {
+      alert("Comentario enviado. ¡Gracias por participar!");
+    }
+  </script>
+</body>
+</html>
